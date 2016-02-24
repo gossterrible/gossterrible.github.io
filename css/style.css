@@ -1,0 +1,217 @@
+.languages-list,
+.tools-list, .work-experience-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #CC00CC;
+}
+
+article {
+  line-height: 1.5;
+  padding-bottom: 200px;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background: rgba(204, 204, 204, 0.8);
+  padding: 50px 0;
+}
+header h1 {
+  font-family: "Vollkorn", serif;
+  font-size: 3em;
+}
+header h2 {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 1.5em;
+  padding: 0 20px;
+}
+
+.resume-image {
+  border-radius: 50%;
+  max-width: 150px;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px;
+}
+
+.phone-number,
+.email-address {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.icon {
+  margin: 0 5px;
+}
+
+section {
+  width: 100%;
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+section h1 {
+  font-size: 2em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  font-family: "Vollkorn", serif;
+  color: #333;
+}
+@media (max-width: 900px) {
+  section h1 {
+    text-align: center;
+  }
+}
+section h2 {
+  font-size: 1.5em;
+  font-family: "Vollkorn", serif;
+  color: #444;
+  display: inline-block;
+}
+@media (max-width: 900px) {
+  section h2 {
+    text-align: center;
+    display: block;
+  }
+}
+
+.education-section-heading {
+  margin-right: 10px;
+}
+
+.address-container {
+  display: inline-block;
+}
+
+.school-name-location-date-container {
+  display: inline-block;
+}
+@media (max-width: 900px) {
+  .school-name-location-date-container {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.school-location,
+.school-dates,
+.state-abbr {
+  font-style: italic;
+  margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+  .languages-list,
+  .tools-list {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+.languages-list > li,
+.tools-list > li {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media (max-width: 900px) {
+  .languages-list > li,
+  .tools-list > li {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+.secondary-languages-list,
+.secondary-tools-list {
+  color: #555;
+}
+.secondary-languages-list li,
+.secondary-tools-list li {
+  margin-left: 10px;
+}
+@media (max-width: 900px) {
+  .secondary-languages-list li,
+  .secondary-tools-list li {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .work-experience-list {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+.work-experience-list > li {
+  width: 100%;
+  padding: 0 10px;
+}
+@media (max-width: 900px) {
+  .work-experience-list > li {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.secondary-work-experience-list > li {
+  padding: 3px 0;
+  margin-left: 10px;
+}
+
+.tertiary-work-experience-list > li {
+  margin-left: 10px;
+}
+
+.organization-name {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.organization-link:hover {
+  color: #888;
+  text-shadow: none;
+}
+
+.organization-dates {
+  font-style: italic;
+}
+
+.position-title {
+  font-size: 1.15em;
+  font-family: "Vollkorn", serif;
+  margin: 10px 0 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 900px) {
+  .position-title {
+    border-bottom: none;
+  }
+}
