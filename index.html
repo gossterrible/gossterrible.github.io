@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
 <link href="http://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" type="text/css"/>
-    
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/normalize.css">
 
      <link rel="stylesheet" href="css/reset.css">
 
     <link rel='stylesheet prefetch' href='http://weloveiconfonts.com/api/?family=fontawesome'>
-   <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Ubuntu'>
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/button.css">
-
+         <link href="css/mdb.css" rel="stylesheet">
+          <link href="css/mdb1.css" rel="stylesheet">
+          <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+           <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
     
     
     
@@ -129,40 +135,40 @@
          <img src="img/tumblr_mjcm9kfGey1qh7gfao1_5002.gif"/>
           <div class="darker"></div>
           <div class="statsDiv">
-            <h2>my Skills</h2>
+            <h4>my Skills</h4>
 
             <div class="dataProg">
 
               <div class="statHolder">
-                <h4>HTML5</h4>
+                <h6>HTML5</h6>
                 <div class="bar">
                   <div data-prog='85' class="progressBar"></div>
                 </div>
               </div>
 
               <div class="statHolder">
-                <h4>CSS3 (SASS)</h4>
+                <h6>CSS3 (SASS)</h6>
                 <div class="bar">
                   <div data-prog='77' class="progressBar"></div>
                 </div>
               </div>
 
               <div class="statHolder">
-                <h4>JAVASCRIPT / jQuery</h4>
+                <h6>JAVASCRIPT / jQuery</h6>
                 <div class="bar">
                   <div data-prog='60' class="progressBar"></div>
                 </div>
               </div>
 
               <div class="statHolder">
-                <h4>BOOTSTRAP</h4>
+                <h6>BOOTSTRAP</h6>
                 <div class="bar">
                   <div data-prog='70' class="progressBar"></div>
                 </div>
               </div>
 
               <div class="statHolder">
-                <h4>JAVA(Android)</h4>
+                <h6>JAVA(Android)</h6>
                 <div class="bar">
                   <div data-prog='75' class="progressBar"></div>
                 </div>
@@ -170,21 +176,21 @@
           
 
               <div class="statHolder">
-                <h4>PHOTOSHOP</h4>
+                <h6>PHOTOSHOP</h6>
                 <div class="bar">
                   <div data-prog='75' class="progressBar"></div>
                 </div>
               </div>
 
               <div class="statHolder">
-                <h4>French</h4>
+                <h6>French</h6>
                 <div class="bar">
                   <div data-prog='100' class="progressBar"></div>
                 </div>
               </div>
 
               <div class="statHolder">
-                <h4>Chinese</h4>
+                <h6>Chinese</h6>
                 <div class="bar">
                   <div data-prog='50' class="progressBar"></div>
                 </div>
@@ -220,51 +226,110 @@
             </div>
           </div>
         </div>
+
       </section>
-      <footer style="padding: 100px;">
-      <h2>CONTACT </h2>
-           <ul class="deck">
-  <li class="deck__item deck__item--facebook">
-    <a class="deck__link" href="https://www.facebook.com/bonniface.dukejurnior">
-      <span class="deck__icon fontawesome-facebook"></span>
-      <span class="deck__label">Facebook</span>
-    </a>
-  </li>
-  <li class="deck__item deck__item--github">
-    <a class="deck__link" href="https://github.com/gossterrible">
-      <span class="deck__icon fontawesome-github"></span>
-      <span class="deck__label">GitHub</span>
-    </a>
-  </li>
-  <li class="deck__item deck__item--twitter">
-    <a class="deck__link" href="https://twitter.com/terriblegoss">
-      <span class="deck__icon fontawesome-twitter"></span>
-      <span class="deck__label">Twitter</span>
-    </a>
-  </li>
-  <li class="deck__item deck__item--linkedin">
-    <a class="deck__link" href="https://www.linkedin.com/in/bahatiboniface">
-      <span class="deck__icon fontawesome-linkedin"></span>
-      <span class="deck__label">LinkedIn</span>
-    </a>
-  </li>
-  </li>
-  <li class="deck__item deck__item--googleplus">
-    <a class="deck__link" href="https://plus.google.com/u/0/104856162342391863859/posts/p/pub">
-      <span class="deck__icon fontawesome-google-plus"></span>
-      <span class="deck__label">Google+</span>
-    </a>
-  </li>
-</ul>
-      </footer>>
-          
+          <!--Section: Contact-->
+                <!--Title-->
+                <div class="row">
+                    <div class="col-md-12 card-panel no-margin elegant-color-dark wow slideInUp">
+                        <div class="text-center white-text">
+                           
+                                <h4>Contact</h4>
+                           
+                        </div>
+                    </div>
+                </div>
+                <!--/.Title-->
+
+                <div class="space-50"></div>
+                <div class="space-50"></div>
+
+                <!-- Main forms row -->
+                <div class="row wow fadeIn">
+                    <div class="col-md-7 col-xs-offset-1">
+                        <div id="map-container" class="card-panel hoverable wow fadeInUp" style="height: 300px; padding-left: 0px;padding-top: 0px;"></div>
+                    </div>
+                    <!-- Contact details -->
+                    <div class="col-md-4 text-center white-text">
+                        <ul class="contact-data">
+                            <li class="wow fadeInUp" data-wow-delay="0.2s"><a  href="#"  class="btn-floating btn-small waves-effect waves-light blue-grey" data-toggle="modal"  data-target="#contact-form"><i class="material-icons">pin_drop</i></a>
+                                <p>Hangzhou,  CHINA</p>
+                            </li>
+
+                            <li class="wow fadeInUp" data-wow-delay="0.3s"><a class="btn-floating btn-small waves-effect waves-light blue-grey" data-toggle="modal" data-target="#contact-form"><i class="material-icons">phone</i></a>
+                                <p>+86-137-3222-1034</p>
+                            </li>
+
+                            <li class="wow fadeInUp" data-wow-delay="0.4s"><a class="btn-floating btn-small waves-effect waves-light blue-grey" data-toggle="modal" data-target="#contact-form"><i class="material-icons">email</i></a>
+                                <p>terriblegoss@yahoo.fr</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/. Main row -->
+           <!--Section: Footer-->
+    <footer class="page-footer elegant-color-dark" id="footer">
+        <!--Footer Content-->
+        <div class="container-fluid footer-content">
+            <div class="row text-center wow fadeIn">
+                <h4 class="white-text wow fadeIn">Find me on social media</h4>
+                <a href="https://www.facebook.com/bonniface.dukejurnior" class="btn-sm-full fb-bg rectangle waves-effect waves-light wow fadeInUp"><i class="fa fa-facebook"> </i> <span>Facebook</span> </a>
+                <a href="https://twitter.com/terriblegoss" class="btn-sm-full tw-bg rectangle waves-effect waves-light wow fadeInUp" data-wow-delay="0.1s"><i class="fa fa-twitter"> </i> <span>Twitter</span></a>
+                <a href="https://plus.google.com/u/0/104856162342391863859/posts/p/pub" class="btn-sm-full gplus-bg rectangle waves-effect waves-light wow fadeInUp" data-wow-delay="0.2s"><i class="fa fa-google-plus"> </i> <span>Google +</span></a>
+                <a href="https://www.linkedin.com/in/bahatiboniface" class="btn-sm-full li-bg rectangle waves-effect waves-light wow fadeInUp" data-wow-delay="0.3s"><i class="fa fa-linkedin"> </i> <span>LinkedIn</span></a>
+                <a href="https://www.instagram.com/goss_terrible/" class="btn-sm-full ins-bg rectangle waves-effect waves-light wow fadeInUp" data-wow-delay="0.4s"><i class="fa fa-instagram"> </i> <span>Instagram</span></a>
+                <a href="https://github.com/gossterrible" class="btn-sm-full yt-bg rectangle waves-effect waves-light wow fadeInUp" data-wow-delay="0.6s"><i class="fa fa-github"> </i> <span>GITHUB</span></a>
+            </div>
+        </div>
+        <!--/.Footer Content-->
+
+        <!--Coprytights-->
+        <div class="footer-copyright text-center rgba-black-light wow fadeIn">
+            <div class="container-fluid">
+                © 2016 Copyright: <a href="http://www.MDBootstrap.com"> gossterrible.com </a>
+            </div>
+        </div>
+        <!--/.Coprytights-->
     </div>
   </div>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+<script src="js/index.js"></script>
+ <script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiYm9uaWZhY2UiLCJhIjoiY2luaG11MmJqMHc5dXR0bTNoMXV4dTZ2cCJ9.haDWi_y6OclDclxvxcvpeg';
+var map = L.mapbox.map('map-container', 'mapbox.streets')
+    .setView([30.2741, 120.1551], 13);
 
-        <script src="js/index.js"></script>
-    
+var featureLayer = L.mapbox.featureLayer({
+        type: 'FeatureCollection',
+        features: [{
+            type: 'Feature',
+            properties: {
+                'from': 'Trophyfabricator',
+                'marker-color': '#548cba',
+                'marker-size': 'large',
+                'marker-symbol': 'suitcase'
+            },
+            geometry: {
+                type: 'Point',
+                coordinates: [120.1551,30.2741]
+            }
+        }]
+    })
+    .addTo(map);
+
+// Note that calling `.eachLayer` here depends on setting GeoJSON _directly_
+// above. If you're loading GeoJSON asynchronously, like from CSV or from a file,
+// you will need to do this within a `featureLayer.on('ready'` event.
+featureLayer.eachLayer(function(layer) {
+
+    // here you call `bindPopup` with a string of HTML you create - the feature
+    // properties declared above are available under `layer.feature.properties`
+    var content = '<h2>Hello!<\/h2>' +
+        '<p>From: ' + layer.feature.properties.from + '<br \/><\/p>';
+    layer.bindPopup(content);
+});
+</script>    
   </body>
 </html>
