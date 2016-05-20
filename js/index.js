@@ -432,3 +432,99 @@ $form.on('click', function(event) {
 	}
 });
 // --- Forms End ---
+// Global Variables for Audio
+    var audioContext;
+    var audioBuffer;
+    var sourceNode;
+    var analyserNode;
+    var javascriptNode;
+    var audioData = null;
+    var audioPlaying = false;
+    var sampleSize = 1024;  // number of samples to collect before analyzing data
+    var amplitudeArray;     // array to hold time domain data
+
+
+    // This must be hosted on the same server as this page - otherwise you get a Cross Site Scripting error
+var audioUrl = "https://s3.amazonaws.com/uploads.hipchat.com/78163/574822/Nkrpb6ipAMmfmNU/beats.ogg";
+
+try {
+  audioContext = new AudioContext();
+} catch(e) {
+  alert('Web Audio API is not supported in this browser');
+}
+
+setupAudioNodes();
+
+
+javascriptNode.onaudioprocess = function () {
+  analyserNode.getByteTimeDomainData(amplitudeArray);
+  if (audioPlaying == true) {
+    drawTimeDomain();
+  }
+}
+
+if(audioData == null) {
+  loadSound(audioUrl);
+} else {
+  playSound(audioData);
+}
+
+ 
+
+function setupAudioNodes() {
+  sourceNode     = audioContext.createBufferSource();
+  analyserNode   = audioContext.createAnalyser();
+  javascriptNode = audioContext.createScriptProcessor(sampleSize, 1, 1);
+
+  // Create the array for the data values
+  amplitudeArray = new Uint8Array(analyserNode.frequencyBinCount);
+
+  // Now connect the nodes together
+  sourceNode.connect(audioContext.destination);
+  sourceNode.connect(analyserNode);
+  analyserNode.connect(javascriptNode);
+  javascriptNode.connect(audioContext.destination);  
+}
+
+// Load the audio from the URL via Ajax and store it in global variable audioData
+// Note that the audio load is asynchronous
+function loadSound(url) {
+  var request = new XMLHttpRequest();
+  request.open('GET', url, true);
+  request.responseType = 'arraybuffer';
+
+  // When loaded, decode the data and play the sound
+  request.onload = function () {
+    audioContext.decodeAudioData(request.response, function (buffer) {
+      audioData = buffer;
+      playSound(audioData);
+    }, onError);
+  }
+  request.send();
+}
+
+// Play the audio and loop until stopped
+function playSound(buffer) {
+  sourceNode.buffer = buffer;
+  sourceNode.start(0);    // Play the sound now
+  sourceNode.loop = false;
+  audioPlaying = true;
+}
+
+function onError(e) {
+  console.log(e);
+}
+
+var test = false;
+function drawTimeDomain() {
+
+  for (var i = 0; i < amplitudeArray.length; i++) {
+    var value = amplitudeArray[i]*2;
+    var y = (.01 * value);
+		env.waveform.geom.vertices[i].setX(((5 / amplitudeArray.length) * i) - 2.5);
+    env.waveform.geom.vertices[i].setY(y);
+    /*env.waveform.geom.vertices[i].setZ((Math.random()*Math.abs(y))-(Math.abs(y)/2));*/
+  }
+  env.waveform.geom.verticesNeedUpdate = true;
+
+}
