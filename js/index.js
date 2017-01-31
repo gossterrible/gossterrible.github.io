@@ -431,3 +431,7 @@ $form.on('click', function(event) {
 		App.contactMail('#emailForm');
 	}
 });
+<<<<<<< HEAD
+=======
+// --- Forms End ---
+>>>>>>> origin/master
