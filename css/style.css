@@ -298,10 +298,7 @@
                 pointer-events: none;
             }
 
-            .nopointerevent .darker {
-                background-color: rgba(16, 14, 4, 0.9) !important;
-                background-image: url(../img/tileBackground.png) !important;
-            }
+           
 
             @-webkit-keyframes flash {
                 0% {
