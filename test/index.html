@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<script>
+    player.addEventListener('x5videoenterfullscreen', function() {
+    var width = window.screen.width;
+    var height = window.screen.height;
+    if (width > height) {
+        width = [height, height = width][0];
+    }
+    player.style.width = width + 'px';
+    player.style.height = height + 'px';
+
+    document.body.classList.add('fullscreen');
+}, false);
+</script>
 <body>
-    <video id="video" class="video" controls="controls" playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true">
-        <source src="https://secure.massmotionmedia.com/hermes/projects/ovni_surprise_171030/videos/20171030170001_432x768_816_5c9250c0-fdc0-4bc2-aa10-305ce2f2bde3.mp4" />
-    </video>
+    <div class="player">
+        <video id="video" class="video" controls="controls" playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true">
+            <source src="https://secure.massmotionmedia.com/hermes/projects/ovni_surprise_171030/videos/20171030170001_432x768_816_5c9250c0-fdc0-4bc2-aa10-305ce2f2bde3.mp4" />
+        </video>
+    </div>
+    <div id="main" class="main">
+        <div class="inner">TEST</div>
+    </div>
 </body>
 </html>
