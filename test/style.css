@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background: #000;
+    font-size: 0.3rem;
+}
+.player {
+    width: 100%;
+    height: 4.22rem;
+}
+.player .video {
+    width: 100%;
+    height: 100%;
+}
+.fullscreen .video {
+    object-position: center top;
+}
+.header {
+    width: 100%;
+    height: 1.14rem;
+    line-height: 1.14rem;
+    background: #fff;
+    font-size: 0.36rem;
+    text-align: center;
+    color: #000;
+}
+.fullscreen .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.fullscreen .player .video {
+    object-position: center 1.14rem;
+}
+.main {
+    height: 5rem;
+    background: #fff;
+}
+.main .inner {
+    padding: 0.3rem;
+}
+.fullscreen .main {
+    margin-top: 1.14rem;
+}
