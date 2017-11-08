@@ -3,12 +3,36 @@
 <head>
 	<link rel="stylesheet" href="style.css">
 </head>
-
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js'></script>
+<!--[if IE]>
+	<script type="text/javascript" src='https://secure.massmotionmedia.com/common/1.0/controller.helpers.min.js'></script>
+<![endif]-->
+<script type="text/javascript" src='https://secure.massmotionmedia.com/common/1.1.0/controller.min.js'></script>
 <body>
     <div class="player">
-        <video id="video" class="video"  controls="controls" playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true">
-            <source src="https://secure.massmotionmedia.com/hermes/projects/ovni_surprise_171030/videos/20171030170001_432x768_816_5c9250c0-fdc0-4bc2-aa10-305ce2f2bde3.mp4" type="video/mp4"/>
+        <video id="v1" class="video" controls="controls" playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true">
+            <source src="" />
         </video>
     </div>
 </body>
+<script>
+$(document).ready(function() {
+	widemotion.setVerboseLevel(widemotion.VERBOSE_INFO);
+	
+	// suppose l'existence d'une <video id="v1"></video> dans le dom
+	widemotion.attach($('#v1'),  'ovni_surprise_171030',['hermes'])
+	.done(function(infos){
+		console.log("Ce handler s'exécute quand on a trouvé une vidéo à lire.");
+		console.log(infos);
+		$('#v1')[0].play();
+	})
+	.fail(function(error_msg){
+		console.log("Ce handler s'exécute lors d'une erreur. Ici : " + error_msg);
+	})
+	.always(function(infos_or_error){
+		console.log("Ce handler s'exécute toujours");
+		console.log(infos_or_error);
+	});
+});
+</script>
 </html>
